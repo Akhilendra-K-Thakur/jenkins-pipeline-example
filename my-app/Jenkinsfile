@@ -15,8 +15,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                    dir("/var/jenkins_home/workspace/Demo Pipeline/my-app")
+                    dir("/var/jenkins_home/workspace/Demo Pipeline/my-app/") {
                     sh 'mvn -B clean package'
+                    }
+                
                 }
             }
         }
